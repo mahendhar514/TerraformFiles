@@ -19,6 +19,7 @@ resource "aws_subnet" "cust1" {
 vpc_id = aws_vpc.cust.id
 cidr_block = "196.56.0.0/22"
 availability_zone = "ap-south-1a"
+map_public_ip_on_launch = true
 tags = {
   Name = "public-subnet-1a-tf"
 }
@@ -29,6 +30,7 @@ resource "aws_subnet" "cust2" {
 vpc_id = aws_vpc.cust.id
 cidr_block = "196.56.4.0/22"
 availability_zone = "ap-south-1b"
+map_public_ip_on_launch = true
 tags = {
   Name = "public-subnet-1b-tf"
 }
